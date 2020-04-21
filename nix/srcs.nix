@@ -19,8 +19,8 @@ rec {
   };
 
   setzer-mcd = fetchGit {
-    url = "https://github.com/makerdao/setzer-mcd";
-    rev = "e9d397fdb9a48c128abc49055840792192945e1b";
+    url = "https://github.com/captain13128/setzer-mcd";
+    rev = "6d170d2088f5f14bc8b06e2f071f5e09ec88deeb";
     ref = "master";
   };
 }
