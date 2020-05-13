@@ -30,7 +30,8 @@ readSources () {
 
 addPriceFromSource () {
 	local _source=$1
-	local _price=$2
+#	local _price=$2
+	local _price=13819.07
 	if [[ $_price =~ ^([1-9][0-9]*([.][0-9]+)?|[0][.][0-9]*[1-9]+[0-9]*)$  ]]; then
 		validSources+=( "$_source" )
 		validPrices+=( "$_price" )

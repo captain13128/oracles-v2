@@ -27,6 +27,7 @@ importEnv () {
 	if [[ "$OMNIA_MODE" == "RELAYER" ]]; then
 		importFeeds $config
 		importServicesEnv $config
+		importMegaPoker $config
 	fi
 }
 
@@ -35,6 +36,13 @@ importMode () {
 	OMNIA_MODE="$(jq -r '.mode' < "$_config" | tr '[:lower:]' '[:upper:]')"
 	[[ "$OMNIA_MODE" =~ ^(FEED|RELAYER){1}$ ]] || { error "Error - Invalid Mode param, valid values are 'FEED' and 'RELAYER'"; exit 1; }
 	export OMNIA_MODE
+}
+
+importMegaPoker () {
+	local _config="$1"
+	MEGA_POKER="$(jq -r '.mega_poker' < "$_config")"
+#	[[ "$MEGA_POKER" =~ ^(0x){1}[0-9a-fA-F]{40}$ ]] || errors+=("Error - Ethereum Address is invalid.")
+	export MEGA_POKER
 }
 
 importNetwork () {
