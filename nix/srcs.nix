@@ -2,7 +2,7 @@
 
 rec {
   makerpkgs = import (fetchGit {
-    url = "https://github.com/makerdao/nixpkgs";
+    url = "https://github.com/makerdao/nixpkgs-pin";
     rev = "d4b7fe56b38236566b3014d328be1bd9c7be7a2f";
     ref = "master";
   }) {
@@ -13,8 +13,8 @@ rec {
 
   dapptools-seth-0_8_4-pre = fetchgit {
     url = "https://github.com/dapphub/dapptools";
-    rev = "78508c6a8db2d6d3e8e09437dbe122bb5e6b2e7e";
-    sha256 = "1kwlh22q8scrd7spn3x91c9vv3axgvnqx3w8n9y4hrwkgypm7ahk";
+    rev = "ab33933b239cedb06dc5427fa630790a09a13348";
+    sha256 = "1zvv7fd4m7v2g6apd075jfhgl86rgwnwxsk09mgzdsg01j7297s8";
     fetchSubmodules = true;
   };
 
